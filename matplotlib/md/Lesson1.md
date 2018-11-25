@@ -168,3 +168,40 @@ while True:
 
     Make another walk? (y/n):n
     
+
+
+```python
+# hide xaxis, yaxis
+rw = RandomWalk()
+rw.fill_walk()
+
+point_numbers = list(range(rw.num_points))
+plt.scatter(rw.x_values, rw.y_values,c=point_numbers, cmap=plt.cm.Blues, edgecolor='none', s=8)
+plt.axes().get_xaxis().set_visible(False)
+plt.show()
+```
+
+    E:\Anaconda\lib\site-packages\matplotlib\cbook\deprecation.py:107: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+      warnings.warn(message, mplDeprecation, stacklevel=1)
+    
+
+
+![png](output_10_1.png)
+
+
+
+```python
+# set figure size
+rw = RandomWalk()
+rw.fill_walk()
+
+plt.figure(dpi=64, figsize=(10,6))
+point_numbers = list(range(rw.num_points))
+plt.scatter(rw.x_values, rw.y_values,c=point_numbers, cmap=plt.cm.Blues, edgecolor='none', s=8)
+
+plt.show()
+```
+
+
+![png](output_11_0.png)
+
